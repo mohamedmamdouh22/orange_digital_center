@@ -94,7 +94,7 @@ class FAQScreen extends StatelessWidget
 
                                 //toggle answer
                                 content: Padding(
-                                    padding: const EdgeInsets.all(20),
+                                    padding: const EdgeInsets.all(21),
                                     child: RichText(
                                         text: HTML.toTextSpan(
                                         context,
