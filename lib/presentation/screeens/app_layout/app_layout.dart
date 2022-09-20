@@ -52,7 +52,7 @@ class _AppLayoutState extends State<AppLayout> {
         BottomNavyBarItem(
             inactiveColor: Colors.black,
             textAlign: TextAlign.center,
-            icon: Icon(Icons.settings_outlined),
+            icon: Icon(FontAwesomeIcons.gear),
             title: Text('Settings'),
             activeColor: primaryColor),
 

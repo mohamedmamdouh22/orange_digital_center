@@ -20,6 +20,7 @@ class LoginScreen extends StatelessWidget {
     Size size = MediaQuery.of(context).size;
     return BlocConsumer<LoginCubit, LoginState>(
       listener: (context, state) {
+        LoginCubit loginCubit = LoginCubit.get(context);
         if (state is LoginSuccess) {
           token = state.loginModel.accessToken!;
           CacheHelper.put(key: tokenKey, value: token).then((value) {
@@ -32,6 +33,7 @@ class LoginScreen extends StatelessWidget {
                 builder: (context) => AppLayout(),
               ),
               (route) => false);
+
         }
       },
       builder: (context, state) {
@@ -127,8 +129,7 @@ class LoginScreen extends StatelessWidget {
                           });
 
                     }
-                    loginCubit.emailController.clear();
-                    loginCubit.passwordController.clear();
+
                   },
                   child: const Text(
                     'Login',
