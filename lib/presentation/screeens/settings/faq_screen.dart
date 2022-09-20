@@ -64,17 +64,14 @@ class FAQScreen extends StatelessWidget
                             children: [
                               //toggle question
                               ToggleListItem(
-
-                                itemDecoration: BoxDecoration(
-
+                                itemDecoration:  BoxDecoration(
                                     borderRadius: BorderRadius.circular(25),
                                   color: Colors.grey
                                     ),
 
                                 headerDecoration: BoxDecoration(
-                                    borderRadius: BorderRadius.circular(25),
+                                  borderRadius: BorderRadius.only(topLeft: Radius.circular(25),topRight: Radius.circular(25)),
                                   color: primaryColor,
-
                                     ),
 
                                 title: Center(
@@ -86,7 +83,7 @@ class FAQScreen extends StatelessWidget
                                         "${faqCubit.faqModel!.List_FAQData[index].question}",
                                         defaultTextStyle: const TextStyle(
                                            fontWeight: FontWeight.bold,
-                                           color: black,
+                                           color: Colors.white,
                                            decoration: TextDecoration.none,
                                            fontSize: 17.0,
                                       ),
@@ -104,7 +101,7 @@ class FAQScreen extends StatelessWidget
                                         "${faqCubit.faqModel!.List_FAQData[index].answer}",
                                         defaultTextStyle: const TextStyle(
                                            fontWeight: FontWeight.bold,
-                                           color: black,
+                                           color: Colors.white,
                                            decoration: TextDecoration.none,
                                            fontSize: 17.0,
                                       ),
