@@ -127,6 +127,8 @@ class LoginScreen extends StatelessWidget {
                           });
 
                     }
+                    loginCubit.emailController.clear();
+                    loginCubit.passwordController.clear();
                   },
                   child: const Text(
                     'Login',
