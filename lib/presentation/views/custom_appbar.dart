@@ -2,10 +2,10 @@ import 'package:flutter/material.dart';
 import 'package:odc/presentation/styles/colors.dart';
 
 class CustomAppbar extends StatelessWidget with PreferredSizeWidget {
-  CustomAppbar({this.title = ''});
+  CustomAppbar({this.title = '',required this.onpressed});
 
   final String title;
-
+  VoidCallback onpressed;
   @override
   Widget build(BuildContext context) {
     List<DropdownMenuItem<String>> options =  [
@@ -44,10 +44,11 @@ class CustomAppbar extends StatelessWidget with PreferredSizeWidget {
           width: size.width / 50,
         )
       ],
-      leading: const Icon(
-        Icons.arrow_back_ios,
+      leading:  IconButton(
+        onPressed: onpressed,
+        icon:Icon(Icons.arrow_back_ios,
         color: primaryColor,
-      ),
+      ),)
     );
   }
 

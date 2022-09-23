@@ -54,10 +54,8 @@ class NotesCubit extends Cubit<NotesState> {
           "Title": "$title",
           "Date": "$dateNow",
         }).then((value){
-      Navigator.push(context, MaterialPageRoute(builder: (BuildContext context) {
-        return NotesScreen();
-      }));
-
+         Navigator.push(context, MaterialPageRoute(builder: (context) => NotesScreen(),));
+         
       emit(InsertNotesSuccess());
     }).catchError((onError) {
 

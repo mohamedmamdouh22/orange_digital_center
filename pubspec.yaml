@@ -49,6 +49,7 @@ dependencies:
   toggle_list: ^0.2.1
   fluttertoast: ^8.0.9
   page_transition: "^2.0.9"
+  modal_progress_hud_nsn: ^0.3.0
 
 
 dev_dependencies:

@@ -47,6 +47,9 @@ class MidtermScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: CustomAppbar(
+        onpressed: (){
+          Navigator.pop(context);
+        },
         title: 'Midterms',
       ),
         body: ListView.separated(

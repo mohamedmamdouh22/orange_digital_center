@@ -17,10 +17,15 @@ class LoginCubit extends Cubit<LoginState> {
   final GlobalKey<FormState> loginKey = GlobalKey<FormState>();
 
   bool visiblePassword = true;
+  bool isLoading=false;
 
     void changePasswordVisibility(){
       visiblePassword = !visiblePassword;
       emit(PasswordVisibilityState());
+    }
+    void changeLoadingProgress(){
+      isLoading= !isLoading;
+      emit(LoginProgress());
     }
 
     void login({

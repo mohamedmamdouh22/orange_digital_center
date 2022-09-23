@@ -14,3 +14,5 @@ class LoginSuccess extends LoginState {
 class LoginFailure extends LoginState {}
 
 class PasswordVisibilityState extends LoginState{}
+
+class LoginProgress extends LoginState{}

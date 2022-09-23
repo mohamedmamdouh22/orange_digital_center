@@ -47,6 +47,9 @@ class FinalScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
         appBar: CustomAppbar(
+          onpressed: (){
+          Navigator.pop(context);
+        },
           title: 'Finals',
         ),
         body: ListView.separated(

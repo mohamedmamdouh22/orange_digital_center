@@ -4,6 +4,7 @@ import 'package:odc/business_logic/notes/notes_cubit.dart';
 import 'package:odc/business_logic/notes/notes_state.dart';
 import 'package:odc/data/local/sql_helperl.dart';
 import 'package:odc/presentation/constants/constants.dart';
+import 'package:odc/presentation/screeens/app_layout/app_layout.dart';
 import 'package:odc/presentation/styles/colors.dart';
 import 'package:odc/presentation/views/custom_text.dart';
 import 'add_notes_screen.dart';
@@ -40,7 +41,7 @@ class NotesScreen extends StatelessWidget {
             leading: IconButton(
               onPressed: ()
               {
-                return Navigator.pop(context);
+                Navigator.pushAndRemoveUntil(context, MaterialPageRoute(builder: (context) => AppLayout(),), (route) => false);
               },
               icon: const Icon(
                   Icons.arrow_back_ios_rounded,
